@@ -1,24 +1,23 @@
 import React from 'react'
+import Menubar from './Menubar'
 
 const Header = () => {
     return (
         <header className='header'>
-            <div className="top-left">
-                <div className="hamburger-btn">
-                    <button>=</button>
-                </div>
-                <nav>
+            <nav>
+                <div className="top-left">
+                    <Menubar />
                     <div className="logo">
                         WeathterApp
                     </div>
-                </nav>
-            </div>
-            <div className="day">
-                Today
-            </div>
-            <div className="theme">
-                <button>Change</button>
-            </div>
+                </div>
+                <div className="day">
+                    Today
+                </div>
+                <div className="theme">
+                    <button>Change</button>
+                </div>
+            </nav>
         </header>
     )
 }

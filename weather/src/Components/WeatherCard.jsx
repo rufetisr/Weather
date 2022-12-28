@@ -1,17 +1,29 @@
-import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useContext } from 'react'
+import { useEffect } from "react";
+// import { useEffect } from 'react';
+// import { useState } from 'react';
+import Context from "../Context/Context"
+import {getDataFromApi} from "../Services/Db"
 
 const WeatherCard = () => {
-    const [obj, setObj] = useState({})
-    useEffect=()=>{
-        key = '2f9270987154c3c51798342a0a80f322'
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=${key}&units={metric}`).then(res=>res.json().then(data=>{
-            setObj(data)
-        }))
-    }
+    //way1
+    // let data = useContext(Context);
+    //way2
+    let {obj, setObj} = useContext(Context)
+
+    // console.log(data);
+    // useEffect( () => {
+    //     // let key = '2f9270987154c3c51798342a0a80f322'
+    //     // let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Baku&appid=${key}&units=metric`);
+    //     // let data = await res.json();
+    //     // console.log(data);
+    //     // setObj(obj)
+
+    // })
+
+
     return (
-        <div>
+        <div>            
             <div className="card-header">
                 ADD CITY
             </div>
@@ -19,7 +31,7 @@ const WeatherCard = () => {
 
             </div>
             <div className="tempDeg">
-                {obj.main.temp}
+
             </div>
         </div>
     )

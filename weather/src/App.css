@@ -4,17 +4,18 @@
     box-sizing: border-box;
 }
 
-.header{
+.header > nav{
     background-color: rgb(129, 38, 215);
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px 10px;
 }
 
 .top-left{
     display: flex;
-    gap: 40px;
-    align-items: baseline;
+    gap: 1em;
+    align-items: center;
 }
 
 .top-left > .hamburger-btn > button{
@@ -22,7 +23,7 @@
     background-color: transparent;
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
+.menu{
+    background-color: red;
+    width: 10px;
 }
