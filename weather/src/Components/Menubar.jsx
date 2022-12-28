@@ -6,24 +6,27 @@ const Menubar = () => {
   const [menuClass, setMenuClass] = useState('menu hidden');
   const [isMenuClick, setIsMenuClick] = useState(false);
 
-  let updateMenu = ()=>{
+  let updateMenu = () => {
     if (!isMenuClick) {
       setClass('burger-bar click');
       setMenuClass('menu visible');
     }
-    else{
+    else {
       setClass("burger-bar unclick");
       setMenuClass('menu hidden');
     }
+    setIsMenuClick(!isMenuClick)
   }
   return (
     <div>
-        <div className='burger-menu'>
-          <div className={btnClass} onClick={updateMenu}></div>
-          <div className={btnClass} onClick={updateMenu}></div>
-          <div className={btnClass} onClick={updateMenu}></div>
-        </div>
+      <div className='burger-menu' onClick={updateMenu}>
+        <div className={btnClass} ></div>
+        <div className={btnClass} ></div>
+        <div className={btnClass} ></div>
+      </div>
+      <div className={menuClass}></div>
     </div>
+
   );
 }
 
