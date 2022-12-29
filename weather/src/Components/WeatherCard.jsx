@@ -4,12 +4,13 @@ import { useEffect } from "react";
 // import { useState } from 'react';
 import Context from "../Context/Context"
 import {getDataFromApi} from "../Services/Db"
+import './WeatherCard.css'
 
 const WeatherCard = () => {
     //way1
     // let data = useContext(Context);
     //way2
-    let {obj, setObj} = useContext(Context)
+    let {weather, setWeather} = useContext(Context)
 
     // console.log(data);
     // useEffect( () => {
@@ -23,15 +24,22 @@ const WeatherCard = () => {
 
 
     return (
-        <div>            
+        <div className='card'>            
             <div className="card-header">
-                ADD CITY
+                {weather.data.name}
             </div>
             <div className="card-img">
-
+                
             </div>
-            <div className="tempDeg">
-
+            <div className="weather">
+                <div className='main-temp'>
+                    <p>{`${Math.round(weather.data.main.temp)}°`}</p>
+                    <p>Cloudy</p>
+                </div>
+                <div className='other'>
+                    <p>Min</p>
+                    <p>Max</p>
+                </div>
             </div>
         </div>
     )

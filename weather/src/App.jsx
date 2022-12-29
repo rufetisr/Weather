@@ -5,15 +5,13 @@ import Context from "./Context/Context"
 
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [obj, setObj] = useState({});
+  // const [count, setCount] = useState(0)
+  const [weather, setWeather] = useState();
   const [inputValue, inputSetValue] = useState("");
 
   const data = {
-    count,
-    setCount,
-    obj,
-    setObj,
+    weather,
+    setWeather,
     inputValue,
     inputSetValue
   }

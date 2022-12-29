@@ -4,7 +4,7 @@ import WeatherCard from './WeatherCard';
 
 const Main = () => {
     return (
-        <main>
+        <main style={{display: 'flex',flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around'}}>
             <Search/>
             <WeatherCard/>
         </main>
