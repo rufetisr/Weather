@@ -2,4 +2,14 @@
     border-radius: 10px;
     background-color: blueviolet;
     padding: 10px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgb(166, 176, 184);
+    width: 150px;
+    height: 200px;
+}
+
+.weather > .other{
+    display: flex;
+    justify-content: space-between;    
 }

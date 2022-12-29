@@ -10,7 +10,7 @@ const WeatherCard = () => {
     //way1
     // let data = useContext(Context);
     //way2
-    let { weather } = useContext(Context)
+    let {img, weather } = useContext(Context)
 
     // console.log(data);
     // useEffect( () => {
@@ -27,19 +27,19 @@ const WeatherCard = () => {
 
             <div className='card'>
                 <div className="card-header">
-                    {`${weather.data.name}`}
+                    {`${weather.data.name}, ${weather.data.sys.country}`}
                 </div>
                 <div className="card-img">
-
+                    <img src={img} alt="img" />
                 </div>
                 <div className="weather">
                     <div className='main-temp'>
                         <p>{`${Math.round(weather.data.main.temp)}°`}</p>
-                        <p>Cloudy</p>
+                        <p>{`${weather.data.weather[0].description}`}</p>
                     </div>
                     <div className='other'>
-                        <p>Min</p>
-                        <p>Max</p>
+                        <p>Min:{weather.data.main.temp_min}</p>
+                        <p>Max:{weather.data.main.temp_max}</p>
                     </div>
                 </div>
             </div>
