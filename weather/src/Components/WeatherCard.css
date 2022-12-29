@@ -18,12 +18,14 @@
 .card-img > img{
     width: 120px;
     height: 120px;
+    margin-top: -5px;
     object-fit: contain;
 }
 
 .weather > .main-temp > .temp{
     font-size: 45px;
     margin-top: -25px;
+    /* font-weight: 700; */
 }
 
 .weather > .main-temp > .desc{
@@ -34,7 +36,7 @@
 }
 
 .other{
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .min{
