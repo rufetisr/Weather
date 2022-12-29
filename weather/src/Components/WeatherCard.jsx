@@ -3,14 +3,14 @@ import { useEffect } from "react";
 // import { useEffect } from 'react';
 // import { useState } from 'react';
 import Context from "../Context/Context"
-import {getDataFromApi} from "../Services/Db"
+import { getDataFromApi } from "../Services/Db"
 import './WeatherCard.css'
 
 const WeatherCard = () => {
     //way1
     // let data = useContext(Context);
     //way2
-    let {weather, setWeather} = useContext(Context)
+    let { weather } = useContext(Context)
 
     // console.log(data);
     // useEffect( () => {
@@ -21,28 +21,30 @@ const WeatherCard = () => {
     //     // setObj(obj)
 
     // })
+    if (weather.data != undefined) {
 
+        return (
 
-    return (
-        <div className='card'>            
-            <div className="card-header">
-                {weather.data.name}
-            </div>
-            <div className="card-img">
-                
-            </div>
-            <div className="weather">
-                <div className='main-temp'>
-                    <p>{`${Math.round(weather.data.main.temp)}°`}</p>
-                    <p>Cloudy</p>
+            <div className='card'>
+                <div className="card-header">
+                    {`${weather.data.name}`}
                 </div>
-                <div className='other'>
-                    <p>Min</p>
-                    <p>Max</p>
+                <div className="card-img">
+
+                </div>
+                <div className="weather">
+                    <div className='main-temp'>
+                        <p>{`${Math.round(weather.data.main.temp)}°`}</p>
+                        <p>Cloudy</p>
+                    </div>
+                    <div className='other'>
+                        <p>Min</p>
+                        <p>Max</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default WeatherCard;

@@ -5,7 +5,7 @@ import { getDataFromApi } from '../Services/Db';
 import axios from "axios";
 
 const Search = () => {
-    let {weather, setWeather} = useContext(Context)
+    let {setWeather} = useContext(Context)
     
     let getData = async (e) => {
         e.preventDefault();

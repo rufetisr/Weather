@@ -6,7 +6,7 @@ import Context from "./Context/Context"
 
 function App() {
   // const [count, setCount] = useState(0)
-  const [weather, setWeather] = useState();
+  const [weather, setWeather] = useState({});
   const [inputValue, inputSetValue] = useState("");
 
   const data = {
