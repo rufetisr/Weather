@@ -6,10 +6,44 @@
     color: #fff;
     text-shadow: 2px 2px 5px rgb(166, 176, 184);
     width: 150px;
-    height: 200px;
+    height: 220px;
+    font-family: sans-serif;
 }
 
 .weather > .other{
     display: flex;
     justify-content: space-between;    
+}
+
+.card-img > img{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.weather > .main-temp > .temp{
+    font-size: 45px;
+    margin-top: -25px;
+}
+
+.weather > .main-temp > .desc{
+    /* font-weight: 100; */
+    opacity: 0.6;
+    text-shadow: none;
+    font-size: 15px;
+}
+
+.other{
+    margin-top: 15px;
+}
+
+.min{
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    /* box-shadow: rgb(181, 28, 1); */
+    color: rgb(202, 17, 17);
+}
+
+.max{
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    color: rgb(169, 252, 45);
 }

@@ -27,19 +27,19 @@ const WeatherCard = () => {
 
             <div className='card'>
                 <div className="card-header">
-                    {`${weather.data.name}, ${weather.data.sys.country}`}
+                    {`${weather.data.name.toUpperCase()}, ${weather.data.sys.country}`}
                 </div>
                 <div className="card-img">
                     <img src={img} alt="img" />
                 </div>
                 <div className="weather">
                     <div className='main-temp'>
-                        <p>{`${Math.round(weather.data.main.temp)}°`}</p>
-                        <p>{`${weather.data.weather[0].description}`}</p>
+                        <p className='temp'>{`${Math.round(weather.data.main.temp)}°`}</p>
+                        <p className='desc'>{`${weather.data.weather[0].description.toUpperCase()}`}</p>
                     </div>
                     <div className='other'>
-                        <p>Min:{weather.data.main.temp_min}</p>
-                        <p>Max:{weather.data.main.temp_max}</p>
+                        <p className='min'>Min:{weather.data.main.temp_min}</p>
+                        <p className='max'>Max:{weather.data.main.temp_max}</p>
                     </div>
                 </div>
             </div>
