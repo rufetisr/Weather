@@ -19,7 +19,6 @@ const WeatherCard = () => {
     //     // let data = await res.json();
     //     // console.log(data);
     //     // setObj(obj)
-
     // })
     if (weather.data != undefined) {
 
