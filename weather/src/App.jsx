@@ -8,13 +8,13 @@ function App() {
   // const [count, setCount] = useState(0)
   const [weather, setWeather] = useState({});
   const [daily, setDaily] = useState({});
-  const [map, setMap] = useState({});
+  const [hourly, setHourly] = useState({});
   const [img, setImg] = useState("");
   const [inputValue, inputSetValue] = useState("");
 
   const data = {
     daily, setDaily,
-    map, setMap,
+    hourly, setHourly,
     img, 
     setImg,
     weather,

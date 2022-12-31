@@ -1,12 +1,11 @@
 import React from 'react';
-import './DailyForecast.css'
-import { useContext } from 'react';
+import { useContext } from "react";
 import Context from '../Context/Context';
+import './HourlyForecast.css'
 
-const DailyForecast = () => {
-
+const HourlyForecast = () => {
+  
   let { setDaily, daily, weather } = useContext(Context)
-
   let getDate = (date) => {
     // const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     // const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -25,18 +24,17 @@ const DailyForecast = () => {
 
 
   }
-
   if (weather.data != undefined) {
     
     return (
-      <ul className='daily'>
+      <ul className='hourly'>
       {
         daily?.list?.map((item, index) => {
-          if (index == 0 || index == 7 || index == 15 || index == 23 || index == 31 || index == 39) {
-
+          if (index >= 0 && index <=4) {
+            
             return (
               <li key={index} className='li'>
-                <p className='day'>{getDate(item.dt_txt)}</p>
+                <p className='hour'>{item.dt_txt.split(' ')[1].substring(0,5)}</p>
                 <div className='mid'>
                   <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="" />
                   <p>{Math.round(item.main.temp)}°</p>
@@ -50,6 +48,6 @@ const DailyForecast = () => {
     </ul>
   );
 }
-}  
+}
 
-export default DailyForecast;
+export default HourlyForecast;

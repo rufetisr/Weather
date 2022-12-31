@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+}
+
+.hourly{
+    display: flex;
+    padding: 10px;    
+    min-width: 320px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.hourly > .li{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid wheat;
+}
+
+.hourly > .li > .mid{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
