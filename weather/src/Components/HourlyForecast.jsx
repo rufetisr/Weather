@@ -44,7 +44,7 @@ const HourlyForecast = () => {
                     </div>
                     <div  className='pop'>
                       <img src="src\assets\water.png" alt="" className='water'/>
-                      <p className='desc'>{`${item.pop * 100}%`}</p>
+                      <p className='desc'>{`${Math.round(item.pop * 100)}%`}</p>
                     </div>
                     <div  className='pop sec2'>
                       <img src="src\assets\wind.webp" alt="" className='water'/>

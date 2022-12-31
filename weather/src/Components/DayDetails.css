@@ -1,3 +1,4 @@
+
 .details{
     background-color: rgb(74, 117, 209);
     width: 530px;
@@ -16,9 +17,27 @@
 .sec3{
     display: flex;
     align-items: center;
+
 }
 
 .sec3 > img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.det2{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(74, 117, 209);
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.sun{
     width: 30px;
     height: 30px;
 }
