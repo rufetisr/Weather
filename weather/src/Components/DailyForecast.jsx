@@ -42,7 +42,7 @@ const DailyForecast = () => {
                     <p className='day'>{getDate(item.dt_txt)}</p>
                     <div className='mid'>
                       <img src="src\assets\water.png" alt="" className='water'/>
-                      <p className='rain'>{`${item.pop*100}%`}</p>
+                      <p className='rain'>{`${Math.round(item.pop*100)}%`}</p>
                       <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="" />
                       <p className='temp'>{Math.round(item.main.temp)}°</p>
                     </div>
