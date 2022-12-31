@@ -21,35 +21,41 @@ const DailyForecast = () => {
     const d = new Date(year, month - 1, day);
     // date= 2022-12-30 => Fri, Dec 30
     console.log(daily.list);
-    return d.toDateString().substring(0,10);
+    return d.toDateString().substring(0, 10);
 
 
   }
 
   if (weather.data != undefined) {
-    
-    return (
-      <ul className='daily'>
-      {
-        daily?.list?.map((item, index) => {
-          if (index == 0 || index == 7 || index == 15 || index == 23 || index == 31 || index == 39) {
 
-            return (
-              <li key={index} className='li'>
-                <p className='day'>{getDate(item.dt_txt)}</p>
-                <div className='mid'>
-                  <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="" />
-                  <p>{Math.round(item.main.temp)}°</p>
-                </div>
-                <p className='desc'>{item.weather[0].description}</p>
-              </li>
-            )
+    return (
+      <div>
+        <h1>Daily</h1>
+        <hr></hr>
+        <ul className='daily'>
+          {
+            daily?.list?.map((item, index) => {
+              if (index == 0 || index == 7 || index == 15 || index == 23 || index == 31 || index == 39) {
+
+                return (
+                  <li key={index} className='li'>
+                    <p className='day'>{getDate(item.dt_txt)}</p>
+                    <div className='mid'>
+                      <img src="src\assets\water.png" alt="" className='water'/>
+                      <p className='rain'>{`${item.pop*100}%`}</p>
+                      <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="" />
+                      <p className='temp'>{Math.round(item.main.temp)}°</p>
+                    </div>
+                    <p className='desc'>{item.weather[0].description}</p>
+                  </li>
+                )
+              }
+            })
           }
-        })
-      }
-    </ul>
-  );
+        </ul>
+      </div>
+    );
+  }
 }
-}  
 
 export default DailyForecast;

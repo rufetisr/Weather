@@ -1,12 +1,19 @@
 .daily{
     /* margin-top: 40px; */
-    background-color: blueviolet;
+    background-color: rgb(74, 117, 209);
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 305px;
+    border-radius: 10px;
+    /* width: fit-content; */
+    width: 530px;          
 }
 
+div > h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
 .mid{
     display: flex;
     align-items: center;
@@ -14,17 +21,29 @@
     justify-content: space-between;
     width: 70px;
 }
-
-.mid > img{
-    height: 50px;
-    width: 50px;
+.mid > .rain{
+    width: 37px;
+    margin-right: 5px;
+    color: rgb(214, 208, 208);
+    font-size: 15px;
 }
-
+.mid > .water{
+    width: 20px;
+    height: 20px;
+}
+.mid > img{
+    height: 60px;
+    width: 60px;
+}
+.mid > .temp{
+    font-size: 22px;
+}
 .li{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px;
+    border: 1px solid white;
 }
 
 .li > .day{

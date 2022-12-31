@@ -13,7 +13,7 @@ const Search = () => {
         let result = await getDataFromApi(`${e.target.city.value}`);
         setWeather(result);
         setImg(`http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`)
-        console.log(result.data.coord.lat, result.data.coord.lon);
+        console.log(result);
 
         const key = '2f9270987154c3c51798342a0a80f322';
         let city = e.target.city.value;

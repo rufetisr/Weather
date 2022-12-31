@@ -4,7 +4,7 @@ import Context from '../Context/Context';
 import './HourlyForecast.css'
 
 const HourlyForecast = () => {
-  
+
   let { setDaily, daily, weather } = useContext(Context)
   let getDate = (date) => {
     // const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -20,34 +20,45 @@ const HourlyForecast = () => {
     const d = new Date(year, month - 1, day);
     // date= 2022-12-30 => Fri, Dec 30
     console.log(daily.list);
-    return d.toDateString().substring(0,10);
+    return d.toDateString().substring(0, 10);
 
 
   }
   if (weather.data != undefined) {
-    
+
     return (
-      <ul className='hourly'>
-      {
-        daily?.list?.map((item, index) => {
-          if (index >= 0 && index <=4) {
-            
-            return (
-              <li key={index} className='li'>
-                <p className='hour'>{item.dt_txt.split(' ')[1].substring(0,5)}</p>
-                <div className='mid'>
-                  <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="" />
-                  <p>{Math.round(item.main.temp)}°</p>
-                </div>
-                <p className='desc'>{item.weather[0].description}</p>
-              </li>
-            )
+      <div >
+        <h1>Hourly</h1>
+        <hr></hr>
+        <ul className='hourly'>
+          {
+            daily?.list?.map((item, index) => {
+              if (index >= 0 && index <= 4) {
+
+                return (
+                  <li key={index} className='li'>
+                    <p className='hour'>{item.dt_txt.split(' ')[1].substring(0, 5)}</p>
+                    <div className='mid'>
+                      <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="" />
+                      <p className='temp'>{Math.round(item.main.temp)}°</p>
+                    </div>
+                    <div  className='pop'>
+                      <img src="src\assets\water.png" alt="" className='water'/>
+                      <p className='desc'>{`${item.pop * 100}%`}</p>
+                    </div>
+                    <div  className='pop sec2'>
+                      <img src="src\assets\wind.webp" alt="" className='water'/>
+                      <p className='desc'>{`${item.wind.speed} m/s`}</p>
+                    </div>
+                  </li>
+                )
+              }
+            })
           }
-        })
-      }
-    </ul>
-  );
-}
+        </ul>
+      </div>
+    );
+  }
 }
 
 export default HourlyForecast;
