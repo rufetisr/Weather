@@ -10,7 +10,7 @@ const WeatherCard = () => {
     //way1
     // let data = useContext(Context);
     //way2
-    let {img, weather } = useContext(Context)
+    let {img, weather,color } = useContext(Context)
 
     // console.log(data);
     // useEffect( () => {
@@ -24,7 +24,7 @@ const WeatherCard = () => {
 
         return (
 
-            <div className='card'>
+            <div className={`card ${color}`}>
                 <div className="card-header">
                     {`${weather.data.name.toUpperCase()}, ${weather.data.sys.country}`}
                 </div>

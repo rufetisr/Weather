@@ -4,7 +4,7 @@ import Context from '../Context/Context';
 import './DayDetails.css'
 
 const DayDetails = () => {
-    let { setDaily, daily, weather } = useContext(Context)
+    let { setDaily, daily, weather, color } = useContext(Context)
 
 
 
@@ -14,7 +14,7 @@ const DayDetails = () => {
             <div className='day-details'>
                 <h1>Day Details</h1>
                 <hr />
-                <div className='details'>
+                <div className={`details ${color}`}>
                     <div className='sec1'>
                         <div className="sec3">
                             <img src="src\assets\thermometer.png" alt="" />
@@ -58,7 +58,7 @@ const DayDetails = () => {
                         <p>{weather.data.visibility / 1000} km</p>
                     </div>
                 </div>
-                <div className='det2'>
+                <div className={`det2 ${color}`}>
                     <div>
                         <h2>Sunrise</h2>
                         <div>

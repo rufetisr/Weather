@@ -1,6 +1,6 @@
-.card{
+.card {
     border-radius: 10px;
-    background-color: rgb(74, 117, 209);
+    /* background-color: rgb(74, 117, 209); */
     padding: 10px;
     text-align: center;
     color: #fff;
@@ -8,44 +8,49 @@
     width: 150px;
     height: 220px;
     font-family: sans-serif;
+
+    background: var(--gray);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* backdrop-filter: blur(0px); */
+    /* -webkit-backdrop-filter: blur(0px); */
+    border: 1px solid rgba(178, 171, 171, 0.51);
 }
 
-.weather > .other{
+.weather>.other {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
-.card-img > img{
+.card-img>img {
     width: 120px;
     height: 120px;
     margin-top: -5px;
     object-fit: contain;
 }
 
-.weather > .main-temp > .temp{
+.weather>.main-temp>.temp {
     font-size: 45px;
     margin-top: -25px;
     /* font-weight: 700; */
 }
 
-.weather > .main-temp > .desc{
+.weather>.main-temp>.desc {
     /* font-weight: 100; */
-    opacity: 0.6;
-    text-shadow: none;
     font-size: 15px;
 }
 
-.other{
+.other {
     margin-top: 10px;
 }
 
-.min{
+.min {
     text-shadow: 2px 2px 5px rgb(255, 255, 255);
     /* box-shadow: rgb(181, 28, 1); */
     color: rgb(202, 17, 17);
 }
 
-.max{
+.max {
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
     color: rgb(169, 252, 45);
 }

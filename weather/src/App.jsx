@@ -10,11 +10,13 @@ function App() {
   const [daily, setDaily] = useState({});
   const [hourly, setHourly] = useState({});
   const [img, setImg] = useState("");
+  const [color, setColor] = useState("white");
   const [inputValue, inputSetValue] = useState("");
 
   const data = {
     daily, setDaily,
     hourly, setHourly,
+    color, setColor,
     img, 
     setImg,
     weather,

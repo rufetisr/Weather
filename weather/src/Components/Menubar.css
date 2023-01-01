@@ -33,6 +33,16 @@
     z-index: 1;
 }
 
+@media screen and (min-width: 320px){
+    .menu{
+        top: 56px;
+    }
+}
+@media screen and (min-width: 356px){
+    .menu{
+        top: 50px;
+    }
+}
 .hidden{
     display: none;
 }

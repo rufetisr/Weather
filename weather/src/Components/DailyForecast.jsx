@@ -5,7 +5,7 @@ import Context from '../Context/Context';
 
 const DailyForecast = () => {
 
-  let { setDaily, daily, weather } = useContext(Context)
+  let { setDaily, daily, weather, color } = useContext(Context)
 
   let getDate = (date) => {
     // const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -29,10 +29,10 @@ const DailyForecast = () => {
   if (weather.data != undefined) {
 
     return (
-      <div>
+      <div >
         <h1>Daily</h1>
         <hr></hr>
-        <ul className='daily'>
+        <ul className={`daily ${color}`}>
           {
             daily?.list?.map((item, index) => {
               if (index == 0 || index == 7 || index == 15 || index == 23 || index == 31 || index == 39) {

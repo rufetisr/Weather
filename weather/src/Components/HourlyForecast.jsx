@@ -5,7 +5,7 @@ import './HourlyForecast.css'
 
 const HourlyForecast = () => {
 
-  let { setDaily, daily, weather } = useContext(Context)
+  let { setDaily, daily, weather, color } = useContext(Context)
   let getDate = (date) => {
     // const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     // const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -30,7 +30,7 @@ const HourlyForecast = () => {
       <div >
         <h1>Hourly</h1>
         <hr></hr>
-        <ul className='hourly'>
+        <ul className={`hourly ${color}`}>
           {
             daily?.list?.map((item, index) => {
               if (index >= 0 && index <= 4) {
